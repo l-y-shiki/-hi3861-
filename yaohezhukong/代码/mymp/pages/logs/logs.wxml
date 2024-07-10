@@ -1,0 +1,16 @@
+<!--logs.wxml-->
+<view class="page">
+  <picker-view style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+    <picker-view-column>
+      <view wx:for="{{years}}" style="line-height: 30px">{{item}}号药盒</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{months}}" style="line-height: 30px">{{item}}时</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{days}}" style="line-height: 30px">{{item}}分</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<view class="showdata">{{year}}号药盒{{month}}时{{day}}分</view>
+<button type="primary" bindtap="setClock">设置闹钟</button>

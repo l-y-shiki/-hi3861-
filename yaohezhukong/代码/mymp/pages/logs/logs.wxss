@@ -1,0 +1,14 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+.page {
+  margin-top: 80px;
+}
+.showdata{
+  display: flex;
+  justify-content: center;
+  margin:50rpx;
+  align-items: center;
+  font-size: 80rpx;
+}

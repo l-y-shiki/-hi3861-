@@ -1,0 +1,71 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="body">
+    <view class="body_wrapper">
+      <view class="data">
+        <view class="data_logo">
+          <image src="/images/wd.png" mode=""/>
+        </view>
+        <view class="data_text">
+          <view class="data_title">温度</view>
+          <view class="data_value">{{temp}}℃</view>
+        </view>
+      </view>
+      <view class="data">
+        <view class="data_logo">
+          <image src="/images/xl.png" mode=""/>
+        </view>
+        <view class="data_text">
+          <view class="data_title">心率</view>
+          <view class="data_value">{{heart}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="body_wrapper">
+      <view class="data">
+        <view class="data_logo">
+          <image src="/images/xy.png" mode=""/>
+        </view>
+        <view class="data_text">
+          <view class="data_title">血氧</view>
+          <view class="data_value">{{blood}}</view>
+        </view>
+      </view>
+      <view class="data">
+        <view class="data_logo">
+          <image src="/images/sg.png" mode=""/>
+        </view>
+        <view class="data_text">
+          <view class="data_title">身高</view>
+          <view class="data_value">{{height}}cm</view>
+        </view>
+      </view>
+    </view>
+    <view class="body_wrapper">
+      <view class="data">
+        <view class="data_logo">
+          <image src="/images/tz.png" mode=""/>
+        </view>
+        <view class="data_text">
+          <view class="data_title">体重</view>
+          <view class="data_value">{{weight}}kg</view>
+        </view>
+      </view>
+      <view class="data">
+        <view class="data_logo">
+          <image src="/images/bmi.png" mode=""/>
+        </view>
+        <view class="data_text">
+          <view class="data_title">BMI</view>
+          <view class="data_value">{{BMI}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="page-section">
+  <view class="input">
+    <input class="weui-input"  maxlength="10" bindinput="bindKeyInput" placeholder="输入你的身高"/>
+  </view>
+  <button type="primary" bindtap="setHeight">设置身高</button>
+</view>

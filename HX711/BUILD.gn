@@ -1,0 +1,25 @@
+static_library("HX711_example") {
+    sources = [
+        "HX711_example.c",
+         "OLED_I2C.c",        
+         "i2c_gpio.c",
+         "lcd_init.c",
+         "lcd.c",
+         "wifi/wifi_connect.c",
+    ]
+
+    cflags = [ "-Wno-unused-variable" ]
+    cflags += [ "-Wno-unused-but-set-variable" ]
+    cflags += [ "-Wno-unused-parameter" ]
+
+    include_dirs = [
+        "//utils/native/lite/include",
+        "//kernel/liteos_m/components/cmsis/2.0",
+        "//base/iot_hardware/peripheral/interfaces/kits",
+        "//vendor/bearpi/bearpi_hm_nano/common/iot_hardware_hals/include",
+
+        "//foundation/communication/wifi_lite/interfaces/wifiservice",
+        "wifi"
+    ]
+    deps = [ "//vendor/bearpi/bearpi_hm_nano/common/iot_hardware_hals:bearpi_iot_hardware_hals" ]
+}
